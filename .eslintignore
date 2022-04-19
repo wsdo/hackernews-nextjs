@@ -1,0 +1,12 @@
+**/dist/**
+**/.next/**
+**/node_modules/**
+**/server.js
+**/webpack.config*.js
+**/flow-typed/**
+src/serviceWorker.js
+build/
+next.config.js
+babel.config.js
+public
+.eslintrc.js

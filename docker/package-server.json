@@ -1,0 +1,23 @@
+{
+  "name": "fig-ssr-next",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env PORT=3000 NODE_ENV=development INIT_ENV=dev nodemon server",
+    "dev:node": "cross-env PORT=3000 NODE_ENV=development INIT_ENV=dev nodemon node/server",
+    "dev:root": "cross-env PORT=3000 NODE_ENV=development INIT_ENV=dev nodemon server-root",
+    "start:dev": "pm2 start ecosystem.config.js --only app --env dev",
+    "start:prod": "pm2 start ecosystem.config.js --only app --env prod",
+    "start:local": "pm2 start ecosystem.config.js --only app --env local",
+    "start:pre": "pm2 start ecosystem.config.js --only app --env pre",
+    "start:test": "pm2 start ecosystem.config.js --only app --env test",
+    "stop": "pm2 stop ecosystem.config.js",
+    "build": "next build",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "express": "^4.17.1",
+    "lru-cache": "^6.0.0",
+    "next": "^12.0.7"
+  }
+}
